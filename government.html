@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Government</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,600,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<header>
+
+  <section class="sub-headertwo">
+
+    <nav>
+      <a href="index.html"><img src="State Logo.png" alt="Vermont Green Mountain Range"></a>
+
+      <div class="nav-links" id="navLinks">
+        <i class="fa fa-close" onclick="hideMenu()"></i>
+
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="explore.html">EXPLORE</a></li>
+          <li><a href="government.html">GOVERNMENT</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+
+      </div>
+
+      <i class="fa fa-bars" onclick="showMenu()"></i>
+
+    </nav>
+
+    <div>
+      <h3>Governor<br>Phil Scott<br>became the 82nd Governor of Vermont on January 5,2017.</h3>
+      <a href="https://governor.vermont.gov/" class="cities-tb"><strong>MEET GOVERNOR SCOTT</strong></a>
+    </div>
+
+  </section>
+
+</header>
+
+
+  <!---------- Statewide Officials ----------->
+
+  <body>
+
+  <section class="events">
+
+    <aside class="asidetwo">
+      <h1>Elected Officials</h1>
+      <a href="https://legislature.vermont.gov/people/all/2018/House">State Representatives</a>
+      <br>
+      <br>
+      <a href="https://legislature.vermont.gov/people/all/2018/Senate">State Senators</a>
+      <br>
+      <br>
+      <a href="https://www.vlct.org/municipal-directory">Local Officials</a>
+      <br>
+      <br>
+
+      <h1>Your Government</h1>
+      
+      <br>
+      <a href="https://www.vermontjudiciary.org/">Judiciary</a>
+      <br>
+      <br>
+      <a href="https://legislature.vermont.gov/">Legislature</a>
+      <br>
+      <br>
+      <a href="https://governor.vermont.gov/">Office of Governor</a>
+      <br>
+      <br>
+      <a href="https://www.vermont.gov/government/agency-a-z#gsc.tab=0">Agency A-Z</a>
+
+    </aside>
+
+      <h1>Statewide Officials</h1>
+
+          <div class="row">
+
+              <div class="events-col">
+                  <img src="David.jpeg" alt="Photo of David Zuckeran">
+                  <h3>Lieutenant Governor</h3>
+                <a href="https://ltgov.vermont.gov/" target="_blank">David Zuckerman</a>
+              </div>
+
+              <div class="events-col">
+                  <img src="charity.jpg" alt="Photo of Charity Clark">
+                  <h3>State Attorney General</h3>
+                  <a href="https://ago.vermont.gov/" target="_blank">Charity Clark</a>
+              </div>
+
+              <div class="events-col">
+                  <img src="MikePieciak.jpeg" alt="Photo of Mike Pieciak">
+                  <h3>State Treasurer</h3>
+                  <a href="https://www.vermonttreasurer.gov/" target="_blank">Mike Pieciak</a>
+              </div>
+
+          </div>
+   </section>
+
+  <section class="events">
+
+          <div class="row">
+
+              <div class="events-col">
+                  <img src="SarahCopelandHanzas.jpg" alt="Photo of Sarah Copeland Hanzas">
+                  <h3>Secretary of State</h3>
+                <a href="https://sos.vermont.gov/" target="_blank">Sarah Copeland Hanzas</a>
+              </div>
+
+              <div class="events-col">
+                  <img src="doug-hoffer.jpg" alt="Photo of Doug Hoffer">
+                  <h3>State Auditor</h3>
+                  <a href="https://auditor.vermont.gov/" target="_blank">Doug Hoffer</a>
+              </div>
+
+              <div class="events-col">
+                  <img src="general-assembly.jpg" alt="Photo of General Assembly">
+                  <h3>State Assembly</h3>
+                  <a href="https://legislature.vermont.gov/" target="_blank">General Assembly</a>
+              </div>
+
+          </div>
+  </section>
+
+
+  <!-------- footer ---------->
+
+  <section class="footer">
+
+    <h4>About</h4>
+    <p>Fictional website based on the state of Vermont for Western Governor's University. <br> Front-End Web Development
+      - D277</p>
+
+    <div class="icons">
+      <a href="https://www.facebook.com/MyVermont/"><i class="fa fa-facebook"></i></a>
+      <a href="https://twitter.com/vermontgov?lang=en"><i class="fa fa-twitter"></i></a>
+      <a href="https://www.linkedin.com/company/state-of-vermont/"><i class="fa fa-linkedin"></i></a>
+    </div>
+
+  </section>
+
+
+  <!----JavaScript for toggle menu---->
+  <script>
+    var navLinks = document.getElementById("navLinks");
+
+    function showMenu() {
+      navLinks.style.right = "0";
+    }
+
+    function hideMenu() {
+      navLinks.style.right = "-200px";
+    }
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vermont State Website Project</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,600,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">  
+</head>
+
+<header>
+  
+  <section class="header">
+
+    <nav>
+      
+      <a href="index.html"><img src="State Logo.png" alt="Vermont State Logo"></a>
+      
+      <div class="nav-links" id="navLinks">
+        <i class="fa fa-close" onclick="hideMenu()"></i>
+        
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="explore.html">EXPLORE</a></li>
+          <li><a href="government.html">GOVERNMENT</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+        
+      </div>
+      
+      <i class="fa fa-bars" onclick="showMenu()"></i>
+      
+    </nav>
+
+    <div class="text-box">
+      <h1>Vermont</h1>
+      <p>Freedom and Unity</p>
+      <a href="explore.html" class="cities-tb">Visit Our State Capital or Other Beautiful Cities</a>
+    </div>
+    
+  </section>
+
+</header>
+
+  <!---------- Think Vermont ----------->
+
+  <body>
+
+  <section class="think">
+    
+    <h1>Think Vermont</h1>
+    <p>Visit <a href="https://thinkvermont.com/" target="_blank">Think Vermont</a> to learn more!</p>
+    
+    <div class="row">
+      
+      <div class="think-col">
+        <h3>Live & Work</h3>
+        <p>With our unparalleled quality of life, an array of career opportunities, and small scale, Vermont is a place
+          where you can succeed while making a difference.</p>
+      </div>
+      
+      <div class="think-col">
+        <h3>Locate & Expand</h3>
+        <p>In Vermont, your business can grow and thrive with the support of technical assistance, incentives, and
+          financing programs that suit your company’s needs.</p>
+      </div>
+      
+      <div class="think-col">
+        <h3>Relocate</h3>
+        <p>Explore your options: small towns, Vermont-style cities, vast open spaces, and a good life await you. If
+          you’re thinking Vermont, we can help you make the leap.</p>
+      </div>
+      
+    </div>
+    
+  </section>
+
+  <!---------- The Green Mountain State ---------->
+
+  <section class="mount">
+
+    <aside class="aside">
+
+      <p>
+        The name "Vermont" is derived from the French words "vert mont," meaning "green mountain." This name was given
+        by the French explorer Samuel de Champlain when he encountered the region's prominent and lush mountain ranges.
+        The Green Mountains are a central and defining feature of the state's landscape, which led to the nickname "The Green Mountain State." This moniker reflects the state's verdant, mountainous terrain that remains a symbol of Vermont's natural beauty." <a href="https://www.nps.gov/nr/travel/centralvermont/vhistory1.htm#:~:text=In%20fact%2C%20the%20State's%20name,European%20immigrants%20to%20the%20land.">Source</a>
+      </p>
+      
+    </aside>
+    
+    <div align="left">
+      
+      <h2>The Green Mountain State</h2>
+      <img src="GreenMountainState.jpg" alt="Photo of Vermont's Green Mountains">
+      
+      <ol>
+        <p>Top Three Mountains with Highest Peaks</p>  
+        <li>Mount Mansfield - 4,393 ft</li>
+        <li>Killington Peak - 4,235 ft</li>
+        <li>Mount Mansfield (Adams Apple and Lower Lip) - 4,120 ft</li> 
+      </ol>
+      
+    </div>
+
+  </section>
+
+  <!---------- Signature Events ---------->
+
+  <section class="events">
+      
+        <h1>Vermont Signature Events</h1>
+        <p>Live music, bike and road races, local food festivals, and beautiful art fill Vermont's calendar.</p>
+      
+            <div class="row">
+              
+                <div class="events-col">
+                    <img src="jazz-festival---burlington-Vermont.jpg" alt="Photo of 'Jazz festival' banner">
+                    <h3>NORTHERN VERMONT EVENTS</h3>
+                  <a href="https://plan.vermontvacation.com/events?search%5Bregion%5D=1" target="_blank">View Events</a>
+                </div>
+              
+                <div class="events-col">
+                    <img src="capital-city-farmers-market.jpg" alt="Photo of locals shopping at farmers market">
+                    <h3>CENTRAL VERMONT EVENTS</h3>
+                    <a href="https://plan.vermontvacation.com/events?search%5Bregion%5D=3" target="_blank">View Events</a>
+                </div>
+              
+                <div class="events-col">
+                    <img src="parade-in-Bennington.jpg" alt="Photo of vintage car driving in parade">
+                    <h3>SOUTHERN VERMONT EVENTS</h3>
+                    <a href="https://plan.vermontvacation.com/events?search%5Bregion%5D=2" target="_blank">View Events</a>
+                </div>
+              
+            </div>
+    </section>
+ 
+  <!-------- footer ---------->
+
+  <section class="footer">
+    
+    <h4>About</h4>
+    <p>Fictional website based on the state of Vermont for Western Governor's University. <br> Front-End Web Development - D277</p>
+    
+    <div class="icons">
+      <a href="https://www.facebook.com/MyVermont/"><i class="fa fa-facebook"></i></a>
+      <a href="https://twitter.com/vermontgov?lang=en"><i class="fa fa-twitter"></i></a>
+      <a href="https://www.linkedin.com/company/state-of-vermont/"><i class="fa fa-linkedin"></i></a>
+    </div>
+  
+  </section>
+
+
+  <!----JavaScript for toggle menu---->
+  <script>
+    var navLinks = document.getElementById("navLinks");
+
+    function showMenu() {
+      navLinks.style.right = "0";
+    }
+
+    function hideMenu() {
+      navLinks.style.right = "-200px";
+    }
+  </script>
+
+</body>
+
+</html>
