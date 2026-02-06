@@ -1,0 +1,840 @@
+/* CSS Variables for consistent theming */
+:root {
+  --primary-green: #228b22;
+  --primary-green-dark: #1a6b1a;
+  --primary-green-light: #2ea92e;
+  --background-light: #ffffff;
+  --background-tint: #f8fdf8;
+  --accent-green: #C1E1C1;
+  --text-dark: #333333;
+  --text-medium: #555555;
+  --text-light: #777777;
+  --border-color: #e0e0e0;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--background-light);
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+
+/* Header Styles */
+.header {
+  min-height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(4, 9, 30, 0.65), rgba(4, 9, 30, 0.65)), url(../images/VermontStateHouse.jpg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+}
+
+/* Navigation Styles */
+nav {
+  display: flex;
+  padding: 1.5rem 4%;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.1);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  transition: all 0.3s ease;
+}
+
+nav img {
+  width: 80px;
+  transition: transform 0.3s ease;
+}
+
+nav img:hover {
+  transform: scale(1.05);
+}
+
+.nav-links {
+  flex: 1;
+  text-align: right;
+}
+
+.nav-links ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  position: relative;
+}
+
+.nav-links ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  transition: color 0.3s ease;
+}
+
+.nav-links ul li a:hover,
+.nav-links ul li a:focus {
+  color: var(--accent-green);
+  outline: none;
+}
+
+.nav-links ul li::after {
+  content: '';
+  width: 0%;
+  height: 2px;
+  background: var(--primary-green-light);
+  display: block;
+  margin: auto;
+  transition: width 0.3s ease;
+}
+
+.nav-links ul li:hover::after {
+  width: 100%;
+}
+
+nav .fa {
+  display: none;
+}
+
+/* Hero Text Box */
+.text-box {
+  width: 90%;
+  max-width: 800px;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  animation: fadeInUp 1s ease;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -45%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.text-box h1 {
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.text-box p {
+  margin: 1.5rem 0 2.5rem;
+  font-size: 1.25rem;
+  color: #fff;
+  font-weight: 300;
+  letter-spacing: 2px;
+}
+
+/* Buttons */
+.cities-tb {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  border: 2px solid #fff;
+  padding: 0.875rem 2rem;
+  font-size: 1rem;
+  font-weight: 500;
+  background: transparent;
+  position: relative;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  letter-spacing: 0.5px;
+}
+
+.cities-tb:hover,
+.cities-tb:focus {
+  border-color: var(--primary-green-light);
+  background: var(--primary-green-light);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(34, 139, 34, 0.3);
+  outline: none;
+}
+
+
+/* Responsive Design - Mobile */
+@media(max-width: 768px) {
+  .nav-links ul li {
+    display: block;
+  }
+
+  .nav-links {
+    position: fixed;
+    background: var(--primary-green);
+    height: 100vh;
+    width: 250px;
+    top: 0;
+    right: -250px;
+    text-align: left;
+    z-index: 999;
+    transition: right 0.4s ease;
+    box-shadow: -4px 0 20px rgba(0, 0, 0, 0.3);
+  }
+
+  .nav-links ul {
+    padding: 2rem;
+    margin-top: 3rem;
+  }
+
+  .nav-links ul li {
+    padding: 1rem 0;
+  }
+
+  nav .fa {
+    display: block;
+    color: #fff;
+    margin: 10px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+
+  nav .fa:hover {
+    transform: scale(1.1);
+  }
+
+  .text-box h1 {
+    font-size: 2.5rem;
+  }
+
+  .text-box p {
+    font-size: 1rem;
+  }
+
+  nav img {
+    width: 60px;
+  }
+}
+
+/*---------- Think Vermont / Explore Vermont --------*/
+
+.think {
+  width: 85%;
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+  padding: 5rem 0;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 1rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  text-align: center;
+  font-weight: 600;
+  margin: 1rem 0;
+  color: var(--text-dark);
+}
+
+p {
+  color: var(--text-light);
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.8;
+  padding: 0.5rem;
+}
+
+.row {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.think-col {
+  flex-basis: calc(33.333% - 1.5rem);
+  background: var(--background-tint);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  padding: 2rem 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.think-col:hover {
+  box-shadow: 0 8px 24px var(--shadow-color);
+  transform: translateY(-5px);
+  border-color: var(--primary-green-light);
+}
+
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column;
+  }
+
+  .think-col {
+    flex-basis: 100%;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+  }
+}
+
+/*---------------- The Green Mountain State ----------------*/
+
+.mount {
+  width: 85%;
+  max-width: 1200px;
+  margin: auto;
+  text-align: left;
+  padding: 3rem 0;
+}
+
+.mount img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px var(--shadow-color);
+  transition: transform 0.3s ease;
+}
+
+.mount img:hover {
+  transform: scale(1.02);
+}
+
+aside {
+  display: block;
+  width: 35%;
+  padding: 1.5rem;
+  margin-left: 1.5rem;
+  float: right;
+  font-style: italic;
+  background-color: var(--background-tint);
+  border-left: 4px solid var(--primary-green);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px var(--shadow-color);
+}
+
+aside a {
+  color: var(--primary-green);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+aside a:hover {
+  color: var(--primary-green-dark);
+  text-decoration: underline;
+}
+
+/*-------------- Signature Events / Explore Vermont ----------------*/
+
+.events {
+  width: 85%;
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+  padding: 5rem 0;
+}
+
+.events-col {
+  flex-basis: calc(33.333% - 1.5rem);
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  text-align: left;
+  transition: transform 0.3s ease;
+}
+
+.events-col:hover {
+  transform: translateY(-5px);
+}
+
+.events-col img {
+  width: 100%;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 12px var(--shadow-color);
+}
+
+.events-col img:hover {
+  transform: scale(1.02);
+}
+
+.events-col p {
+  padding: 0;
+}
+
+.events-col h3 {
+  margin-top: 1.25rem;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.events-col a {
+  color: var(--primary-green);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.events-col a:hover,
+.events-col a:focus {
+  color: var(--primary-green-dark);
+  text-decoration: underline;
+}
+
+.asidetwo {
+  display: block;
+  width: 20%;
+  padding: 1.5rem;
+  margin-left: 1.5rem;
+  float: right;
+  font-style: italic;
+  background-color: var(--background-tint);
+  border-left: 4px solid var(--primary-green);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px var(--shadow-color);
+}
+
+/*--------------Footer---------------*/
+
+.footer {
+  width: 100%;
+  text-align: center;
+  padding: 3rem 0;
+  background-color: var(--background-tint);
+  border-top: 1px solid var(--border-color);
+  margin-top: 4rem;
+}
+
+.footer h4 {
+  margin-bottom: 1.5rem;
+  margin-top: 1rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.footer p {
+  color: var(--text-medium);
+}
+
+.icons .fa {
+  color: var(--primary-green);
+  margin: 0 1rem;
+  cursor: pointer;
+  padding: 1.25rem 0;
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.icons .fa:hover,
+.icons .fa:focus {
+  color: var(--primary-green-dark);
+  transform: translateY(-3px);
+}
+
+/*--------------- Manchester / Montpelier / Stowe --------------*/
+
+.sub-header {
+  height: 50vh;
+  min-height: 400px;
+  width: 100%;
+  background-image: linear-gradient(rgba(4, 9, 30, 0.65), rgba(4, 9, 30, 0.65)), url(../images/green.jpg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  text-align: center;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.sub-header h1 {
+  margin-top: 3rem;
+  font-size: 3rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.city-us {
+  width: 85%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 5rem 0;
+}
+
+.city-col {
+  flex-basis: 48%;
+  padding: 2rem 1rem;
+}
+
+.city-col h1 {
+  padding-top: 0;
+  color: var(--text-dark);
+}
+
+.city-col p {
+  padding: 1.25rem 0;
+  color: var(--text-light);
+}
+
+.cities-tb.green-btn {
+  border: 2px solid var(--primary-green);
+  background: transparent;
+  color: var(--primary-green);
+}
+
+.cities-tb.green-btn:hover,
+.cities-tb.green-btn:focus {
+  border-color: var(--primary-green-dark);
+  background: var(--primary-green-dark);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(34, 139, 34, 0.3);
+}
+
+.content-image {
+  flex-basis: 50%;
+}
+
+.city-col img {
+  width: 100%;
+  max-width: 500px;
+  transition: transform 0.3s ease;
+}
+
+.city-col img:hover {
+  transform: scale(1.02);
+}
+
+#round {
+  border-radius: 50%;
+  box-shadow: 0 8px 24px var(--shadow-color);
+}
+
+/* Tables */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 2rem 0;
+  box-shadow: 0 2px 8px var(--shadow-color);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+th,
+td {
+  border: 1px solid var(--border-color);
+  padding: 1rem;
+  text-align: left;
+}
+
+th {
+  background-color: var(--primary-green);
+  color: white;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  letter-spacing: 0.5px;
+}
+
+td {
+  color: var(--text-dark);
+}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+tr:nth-child(even) {
+  background-color: var(--background-tint);
+}
+
+tr:hover {
+  background-color: rgba(193, 225, 193, 0.3);
+  transition: background-color 0.3s ease;
+}
+
+/*------- Government ------*/
+
+.sub-headertwo {
+  height: 50vh;
+  min-height: 400px;
+  width: 100%;
+  background-image: linear-gradient(rgba(4, 9, 30, 0.65), rgba(4, 9, 30, 0.65)), url(../images/Phil.jpg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  text-align: center;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.sub-headertwo h1 {
+  margin-top: 2rem;
+  font-size: 3rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.sub-headertwo h3 {
+  color: #fff;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  max-width: 600px;
+}
+
+/*------- Contact Us Page ------------*/
+
+.location {
+  padding-bottom: 50%;
+  position: relative;
+  margin: 2rem 0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px var(--shadow-color);
+}
+
+.location iframe {
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  position: absolute;
+}
+
+.contact-us {
+  width: 85%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 3rem 0;
+}
+
+.contact-col {
+  flex-basis: 48%;
+  margin-bottom: 2rem;
+}
+
+.contact-col div {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2.5rem;
+}
+
+.contact-col div .fa {
+  font-size: 1.75rem;
+  color: var(--primary-green);
+  margin: 0.5rem;
+  margin-right: 2rem;
+  transition: color 0.3s ease;
+}
+
+.contact-col div .fa:hover {
+  color: var(--primary-green-dark);
+}
+
+.contact-col div p {
+  padding: 0;
+  color: var(--text-medium);
+}
+
+.contact-col div h5 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-medium);
+  font-weight: 500;
+}
+
+.contact-col input,
+.contact-col textarea {
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 1.25rem;
+  outline: none;
+  border: 2px solid var(--border-color);
+  border-radius: 4px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.contact-col input:focus,
+.contact-col textarea:focus {
+  border-color: var(--primary-green);
+  box-shadow: 0 0 0 3px rgba(34, 139, 34, 0.1);
+}
+
+.contact-col input.error {
+  border-color: #dc3545;
+}
+
+.contact-col input.success {
+  border-color: var(--primary-green);
+}
+
+.contact-col textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.aside {
+    width: 20%;
+    float: right;
+    margin: 2rem 0;
+}
+
+/* Contact page layout: align aside to the right and center the rel/abs box */
+.location + section {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.location + section .aside {
+  float: none;
+  width: 300px;
+  margin: 2rem 0;
+}
+
+.location + section .relative {
+  margin: 2rem 0;
+  flex: 0 1 520px;
+}
+
+div.relative {
+  position: relative;
+  max-width: 500px;
+  margin: 2rem auto;
+  padding: 2rem;
+  padding-bottom: 17rem;
+  background-color: var(--background-tint);
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 8px var(--shadow-color);
+}
+
+div.absolute {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 1rem;
+  background-color: white;
+  border: 2px solid var(--primary-green);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px var(--shadow-color);
+  max-width: 250px;
+}
+
+.footer-link {
+  text-decoration: none;
+  color: var(--text-light);
+  transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+  color: var(--primary-green);
+}
+
+/* Accessibility - Screen Reader Only */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Skip Navigation Link */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--primary-green);
+  color: white;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  z-index: 1000;
+  border-radius: 0 0 4px 0;
+}
+
+.skip-link:focus {
+  top: 0;
+  outline: 2px solid white;
+  outline-offset: 2px;
+}
+
+/* Focus Visible States */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--primary-green);
+  outline-offset: 2px;
+}
+
+/* Responsive Media Query for Mobile - Additional */
+@media (max-width: 768px) {
+  .aside,
+  .asidetwo {
+    width: 100%;
+    float: none;
+    margin: 2rem 0;
+  }
+
+  .sub-header h1,
+  .sub-headertwo h1 {
+    font-size: 2rem;
+  }
+
+  div.absolute {
+    position: relative;
+    right: auto;
+    bottom: auto;
+    max-width: 100%;
+    margin-top: 1rem;
+  }
+}
