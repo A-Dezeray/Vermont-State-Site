@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,600,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+
+<header>
+
+  <section class="header">
+
+    <nav>
+
+      <a href="index.html"><img src="State Logo.png" alt="Vermont State Logo"></a>
+
+      <div class="nav-links" id="navLinks">
+        <i class="fa fa-close" onclick="hideMenu()"></i>
+
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="explore.html">EXPLORE</a></li>
+          <li><a href="government.html">GOVERNMENT</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+
+      </div>
+
+      <i class="fa fa-bars" onclick="showMenu()"></i>
+
+    </nav>
+
+    <div class="text-box">
+      <h1>Contact US</h1>
+    </div>
+
+  </section>
+
+</header>
+
+  <!------- Map and Rel/Abs ------->
+
+  <body>
+
+  <section class="location">
+    <p style="text-align: center;"><iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1472629.5255936172!2d-72.451476!3d43.8717955!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cb4dc6c48daceff%3A0x264d897436546bb4!2sVermont!5e0!3m2!1sen!2sus!4v1712021587621!5m2!1sen!2sus"
+        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe></p>
+  </section>
+
+  <section class="events">
+    
+  <aside class="aside">
+      <h2>Get in Touch</h2>
+    <img src="contact.jpg" alt="Sunset over Vermont">
+      <form id="contactForm">
+          <input type="text" id="firstName" name="firstName" placeholder="Enter your first name" required><br>
+          <input type="text" id="lastName" name="lastName" placeholder="Enter your last name" required<br>
+          <input type="email" id="email" name="email" placeholder="Enter your email address" required><br>
+          <input type="email" id="confirmEmail" name="confirmEmail" placeholder="Confirm your email address" required><br>
+          <textarea id="question" name="question" placeholder="Type your question here"></textarea><br>
+          <input type="submit" value="Submit" class="cities-tb green-btn">
+      </form>
+  </aside>
+
+    <div class="relative" style="text-align:center;">For general inquiries:<br> email DHR.General@vermont.gov or call
+      (802) 828-3491.<br><br>
+      To report broken links or other general web site issues:<br> contact the web site administrator.
+      <div class="absolute" style="text-align:center">Department of Human Resources<br>
+        120 State Street – 5th Floor
+        Montpelier, VT 05620-2505</div>
+    </div>
+
+  </section>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+
+  <!-------- footer ---------->
+
+  <section class="footer">
+    
+    <h4>About</h4>
+    <p>Fictional website based on the state of Vermont for Western Governor's University. <br> Front-End Web Development
+      - D277</p>
+
+    <div class="icons">
+      <a href="https://www.facebook.com/MyVermont/"><i class="fa fa-facebook"></i></a>
+      <a href="https://twitter.com/vermontgov?lang=en"><i class="fa fa-twitter"></i></a>
+      <a href="https://www.linkedin.com/company/state-of-vermont/"><i class="fa fa-linkedin"></i></a>
+    </div>
+
+  </section>
+
+
+  <!----JavaScript for toggle menu---->
+  <script>
+    var navLinks = document.getElementById("navLinks");
+
+    function showMenu() {
+      navLinks.style.right = "0";
+    }
+
+    function hideMenu() {
+      navLinks.style.right = "-200px";
+    }
+  </script>
+
+</body>
+
+</html>
